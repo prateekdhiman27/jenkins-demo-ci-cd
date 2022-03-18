@@ -1,0 +1,132 @@
+{
+    "inputs": [
+        {
+            "id": "UI5MinVersion1.65.0",
+            "type": "command",
+            "command": "sap.ux.appGenerator.ui5Version",
+            "args": {
+                "minUI5Version": "1.65.0"
+            }
+        }
+    ],
+    "configurations": [
+        {
+            "name": "Start Products",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/Products",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html?sap-ui-xx-viewCache=false#app-tile"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect"
+            }
+        },
+        {
+            "name": "Start Products with UI5 Version",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/Products",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html?sap-ui-xx-viewCache=false#app-tile",
+                "${input:UI5MinVersion1.65.0}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect"
+            }
+        },
+        {
+            "name": "Start Products Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Products",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandboxMockServer.html?sap-ui-xx-viewCache=false#app-tile"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {}
+        },
+        {
+            "name": "Start Products Mock with UI5 Version",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Products",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandboxMockServer.html?sap-ui-xx-viewCache=false#app-tile",
+                "${input:UI5MinVersion1.65.0}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229
+        },
+        {
+            "name": "Start Products Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Products",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html?sap-ui-xx-viewCache=false#app-tile"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {}
+        }
+    ],
+    "compounds": []
+}
