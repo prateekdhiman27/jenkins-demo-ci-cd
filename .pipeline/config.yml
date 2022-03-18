@@ -1,0 +1,16 @@
+general:
+  buildTool: 'mta'
+steps:
+  mtaBuild:
+    buildTarget: 'CF'
+    platform: 'CF'
+    docker :
+      dockerImage : 'devxci/mbtci-java11-node14:latest'
+  cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+    cloudFoundry:
+      apiEndpoint: 'https://api.cf.us10.hana.ondemand.com'
+      org: 'PreSales_jmr'
+      space: 'dev'
+      credentialsId: 'cf-deploy'
