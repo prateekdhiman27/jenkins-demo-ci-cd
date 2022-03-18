@@ -1,5 +1,4 @@
-@Library('piper-lib-os') _
-@Library('piper-lib-os') _
+@Library "piper-lib-os" _
 
 node() {
 
