@@ -1,0 +1,17 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ns.Products.controller.View1" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Products Information Details from Northwind Service - Dxxx version 1.0.team">
+					<content>
+					    <List noDataText="Drop list items here" id="list0" items="{/Products}">
+					        <items>
+					            <StandardListItem type="Navigation" title="{ProductName}" description="{ProductID}" icon="sap-icon://picture" id="item0"/>
+					        </items>
+					    </List>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

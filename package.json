@@ -1,0 +1,21 @@
+{
+  "name": "productsapp",
+  "version": "0.0.1",
+  "engines": {
+    "node": "^14.0.0"
+  },
+  "devDependencies": {
+    "@sap/eslint-plugin-ui5-jsdocs": "^2.0.5",
+    "@sap/ui5-builder-webide-extension": "^1.1.7",
+    "@sapui5/ts-types": "^1.90.10",
+    "@ui5/cli": "^2.14.1",
+    "bestzip": "^2.2.0",
+    "eslint": "^8.4.1",
+    "rimraf": "^3.0.2"
+  },
+  "ui5": {
+    "dependencies": [
+      "@sap/ui5-builder-webide-extension"
+    ]
+  }
+}
