@@ -9,7 +9,6 @@ node() {
 
   stage('buildMta') {
     mtaBuild script: this
-    mtaBuildTool: 'cloudMbt'
   }
   
   stage('deployCF') {
