@@ -14,8 +14,6 @@ node() {
   
   stage('deployCF') {
     cloudFoundryDeploy script: this
-    deployTool:'mtaDeployPlugin',
-        verbose: true
   }
 
 }
