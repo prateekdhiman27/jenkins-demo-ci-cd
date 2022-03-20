@@ -5,10 +5,9 @@ steps:
     buildTarget: 'CF'
     platform: 'CF'
   cloudFoundryDeploy:
-    deployTool: 'mtaDeployPlugin'
-    deployType: 'standard'
     cloudFoundry:
+      credentialsId: 'cf-deploy'
       apiEndpoint: 'https://api.cf.us10.hana.ondemand.com'
       org: 'PreSales_jmr'
       space: 'dev'
-      credentialsId: 'cf-deploy'
+
