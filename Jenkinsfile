@@ -7,12 +7,15 @@ node() {
     setupCommonPipelineEnvironment script:this
   }
 
-  stage('buildMta_') {
+  stage('buildMta') {
     mtaBuild script: this
+    mtaBuildTool: 'cloudMbt'
   }
   
-  stage('deployXSA') {
+  stage('deployCF') {
     cloudFoundryDeploy script: this
+    deployTool:'mtaDeployPlugin',
+        verbose: true
   }
 
 }

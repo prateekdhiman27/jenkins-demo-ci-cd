@@ -4,8 +4,6 @@ steps:
   mtaBuild:
     buildTarget: 'CF'
     platform: 'CF'
-    docker :
-      dockerImage : 'devxci/mbtci-java11-node14:latest'
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
