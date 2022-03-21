@@ -9,13 +9,12 @@ node() {
 
   stage('buildMta') {
     mtaBuild script: this
-    mtaBuildTool: 'cloudMbt'
   }
   
   stage('deployCF') {
     cloudFoundryDeploy script: this
   }
-
+  
 }
 //pipeline{
 //  agent any
